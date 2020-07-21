@@ -33,9 +33,9 @@
 - [ Overview ](#about)
 - [Usage](#usage)
 - [ Documentation](#docs)
+- [Tests](#tests)
 - [Installation](#installation)
 - [Dependencies](#dependencies)
-- [Tests](#tests)
 - [License](#license)
 
 \
