@@ -137,12 +137,6 @@ class switch:
         return dups
 
     @staticmethod
-    def _isinstance(obj, cls):
-        if obj.__class__.__name__ == cls.__name__:
-            return True
-        return False
-
-    @staticmethod
     def _isiterable(p_iterable):
         return hasattr(p_iterable, '__iter__') or \
                hasattr(p_iterable, '__next__') or \
@@ -216,7 +210,7 @@ class switch:
     def _error(cause):
         raise SwitchError(cause)
 
-    def _scase(self, bool_val, func=None, args=(), kwargs=None, c_break=None):
+    def _s_case(self, bool_val, func=None, args=(), kwargs=None, c_break=None):
         self.__update_cval()
         _case = None
         brk = self.__create_break()
@@ -255,9 +249,9 @@ class switch:
                 break
         self._from_icase = True
         if _val:
-            self._scase(_val, func, args, kwargs, c_break)
+            self._s_case(_val, func, args, kwargs, c_break)
         else:
-            self._scase(iterable, func, args, kwargs, c_break)
+            self._s_case(iterable, func, args, kwargs, c_break)
         self._from_icase = False
 
     def _s_fcase(self, *, f_name, f_args=(), f_kwargs=None, func=None, args=(), kwargs=None, c_break=None):
@@ -276,7 +270,7 @@ class switch:
             self._error("f_kwargs in fcase must be dict type if specified")
         val = f_name(*_args, **_kwargs)
         self._from_fcase = True
-        self._scase(val, func, args, kwargs, c_break)
+        self._s_case(val, func, args, kwargs, c_break)
         self._from_fcase = False
 
     #################################
@@ -332,8 +326,8 @@ class switch:
         self.__set_default(func, args, kwargs, c_break)
 
     def case(self, value, func=None, args=(), kwargs=None, c_break=None):
-        self._scase(bool_val=value, func=func,
-                    args=args, kwargs=kwargs, c_break=c_break)
+        self._s_case(bool_val=value, func=func,
+                     args=args, kwargs=kwargs, c_break=c_break)
 
     def icase(self, iterable, func=None, args=(), kwargs=None, c_break=None):
         self._s_icase(iterable=iterable, func=func,
