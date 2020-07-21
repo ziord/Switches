@@ -89,7 +89,7 @@ For more information about `fallthrough` attribute and `break` statements see th
 <a name='docs'></a>
 ## Documentation
 More information is contained in the documentation.
-[Read the docs](https://github.com/ziord/Switches/blob/master/DOCUMENTATION).
+[Read the docs](https://github.com/ziord/Switches/blob/master/DOCUMENTATION.md).
 
 \
 <a name='tests'></a>
