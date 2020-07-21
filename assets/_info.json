@@ -1,0 +1,17 @@
+{
+    "name": "switches",
+    "version": "0.0.1",
+    "description": "Use C-like switch construct in Python",
+    "author": "Jeremiah Ikosin <@ziord>",
+    "long-desc": "C-like switch package for Python",
+    "keywords": "python switch C",
+    "license": "MIT",
+    "project_urls": {
+        "Documentation": "https://github.com/ziord/switches/blob/master/README.md",
+        "Source Code": "https://github.com/ziord/switches"
+    },
+    "package_data": {
+        "license": "LICENSE.txt",
+        "readme": "README.md"
+    }
+}
