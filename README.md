@@ -110,4 +110,4 @@ Python 3.6+
 \
 <a name='license'></a>
 ## License
-[MIT](https://github.com/ziord/Switches/blob/master/LICENSE)
+[MIT](https://github.com/ziord/Switches/blob/master/LICENSE.txt)
