@@ -6,6 +6,8 @@
 from collections import namedtuple
 import warnings
 
+__all__ = ('switch', 'SwitchError',)
+
 
 class SwitchError(Exception): ...
 
