@@ -125,4 +125,7 @@ class TestSwitches(unittest.TestCase):
     def test_icase_kwargs_error(self):
         with self.assertRaises(SwitchError):
             test_icase_kwargs_err()
-    ...
+
+
+if __name__ == '__main__':
+    unittest.main()
