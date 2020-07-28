@@ -209,9 +209,7 @@ switch.case(value, func=None, args=(), kwargs=None, c_break=None)
 
 - `args`: The actual arguments to be passed to the function (passed in as `func`) if it takes any. `args` must be of `list`, `tuple` or `set` type. If otherwise, a `SwitchError` is raised.
 
-- `kwargs`: The arguments passed as keyword arguments to the function (passed in as `func`) if it takes any.
-
-`kwargs` must be of dict type, if otherwise, a `SwitchError` is raised. 
+- `kwargs`: The arguments passed as keyword arguments to the function (passed in as `func`) if it takes any. `kwargs` must be of dict type, if otherwise, a `SwitchError` is raised. 
 
 - `c_break`: This can be set to `True` or `False` in any case statement, this is equivalent to an explicit `s.c_break()` statement after a case statement.
 
