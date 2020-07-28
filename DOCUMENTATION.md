@@ -162,7 +162,7 @@ with switch(value, fallthrough=True) as s:
     s.case(5)  # yes we can specify only the value! more details in switch.case section.
     s.case(6)  
     s.case(7, lambda: print("in case 7"))
-    s.default(lamba: print("Default reached!"))
+    s.default(lambda: print("Default reached!"))
 ```
 
 In the snippet above, the output when `value` is `5`, `6` or `7` would be:   
