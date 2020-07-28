@@ -13,7 +13,7 @@
 
 - [Importing switch](#importing-switches)
 - [The switch Context Manager](#switch-ctx-manager)
-- [Meet the Modes: Fallthrough vs No Fallthrough](#ft-vs-nft)
+- [Meet the Modes: Fallthrough vs No-Fallthrough](#ft-vs-nft)
     - [No-Fallthrough Mode](#nft-mode)
     - [Fallthrough Mode](#ft-mode)
 - [Three Kinds of Cases](#cases)
@@ -68,7 +68,7 @@ These are discussed in the rest of the documentation.
 \
 \
 <a name='ft-vs-nft'></a>
-## Meet the Modes: Fallthrough vs No Fallthrough
+## Meet the Modes: Fallthrough vs No-Fallthrough
 
 Fallthrough is what happens when execution drops from a matching case (one without a `break` specified) statement (after such case has been executed) to the _next_ case statement(s) (it continues dropping) if any (or even a default statement) in the switch block. 
 
@@ -82,7 +82,7 @@ Switches has two modes:
 - Fallthrough Mode
 - No-Fallthrough Mode
 
-The `switch` constructor provides a `fallthrough` argument which is disabled (`False`) by default. This implies that the default mode is **No Fallthrough.**
+The `switch` constructor provides a `fallthrough` argument which is disabled (`False`) by default. This implies that the default mode is **No-Fallthrough.**
 
 <br/>
 <a name='nft-mode'></a>
@@ -111,7 +111,7 @@ with switch(value) as s:
 
 Thus explicit `c_breaks` can be omitted in No-Fallthrough Mode.
 
-As stated [earlier](#default-mode), the default mode in Switches is No Fallthrough.
+As stated [earlier](#default-mode), the default mode in Switches is No-Fallthrough.
 
 Hence, there's no need to specify `fallthrough=False` in the switch constructor if **No-Fallthrough Mode** is desired. 
 
