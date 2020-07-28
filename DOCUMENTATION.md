@@ -136,7 +136,7 @@ with switch(value, fallthrough=True) as s:
     s.case(1, lambda: print("in case 1"))
     s.case(5, lambda: print("in case 5"))
     s.case(7, lambda: print("in case 7"))
-    s.default(lamba: print("Default reached!"))
+    s.default(lambda: print("Default reached!"))
 ```
 
 When `value` is `5`, the code snippet above would produce the output:
@@ -171,9 +171,9 @@ in case 7
 Default reached!
 ```
 
-This is because when `value` is `5`, it'll match `s.case(5)` and fall through to `s.case(6)`, `s.case(7, lambda: print("in case 7"))` and `s.default(lamba: print("Default reached!"))`.
+This is because when `value` is `5`, it'll match `s.case(5)` and fall through to `s.case(6)`, `s.case(7, lambda: print("in case 7"))` and `s.default(lambda: print("Default reached!"))`.
 
-Also when `value` is `7`, `s.case(7...)` and `s.default(lamba: print("Default reached!"))` would be executed (fallthrough). 
+Also when `value` is `7`, `s.case(7...)` and `s.default(lambda: print("Default reached!"))` would be executed (fallthrough). 
 <a name='catch-many'></a>
 It thus acts like a "catch many" feature, although, `switch.icase` may be better suited for this purpose.
 
@@ -298,7 +298,7 @@ with switch(value, fallthrough=True) as s:
     s.case(1, lambda: print("in case 1"), c_break=True)
     s.case(5, lambda: print("in case 5"))
     s.case(7, lambda: print("in case 7"))
-    s.default(lamba: print("Default reached!"))
+    s.default(lambda: print("Default reached!"))
 ```
 
 The code snippet above is in Fallthrough Mode. However, if `value` is `1`, we would have the following output:
@@ -320,7 +320,7 @@ with switch(value, fallthrough=False) as s:
     s.case(1, lambda: print("in case 1"), c_break=False)
     s.case(5, lambda: print("in case 5"))
     s.case(7, lambda: print("in case 7"))
-    s.default(lamba: print("Default reached!"))
+    s.default(lambda: print("Default reached!"))
 ```
 
 The code snippet above is in No-Fallthrough Mode. However, if `value` is `1`, we would have the following output:
@@ -362,7 +362,7 @@ with switch(value) as s:
     s.case(12, lambda: print("in case"), c_break=False)
     s.icase(range(10), lambda: print("in icase"))
     s.case(7, lambda: print("in case 7"))
-    s.default(lamba: print("Default reached!"))
+    s.default(lambda: print("Default reached!"))
 ```
 
 If `value` is between the range of `1` and `9`, `s.icase(...)` would be matched and its `func` would be executed. As explained [earlier](#catch-many), `icase` works effectively as a "catch-many" kind of case.   
@@ -409,7 +409,7 @@ with switch(value) as s:
     s.case(12, lambda: print("in case"), c_break=False)
     s.fcase(f_name=foo, f_args=[2, 3], func=lambda: print("in fcase 1"))
     s.fcase(f_name=bar, f_kwargs={'a': 2, 'b': 2}, func=lambda: print("in fcase 2"))
-    s.default(lamba: print("Default reached!"))
+    s.default(lambda: print("Default reached!"))
 ```
 In the snippet above, when `value` is `6`, the first `fcase` would be matched (because the result of `foo(2, 3)` is `6`).
 When `value` is `4`, the second `fcase` would be matched (because the result of `bar(2, 2)` is `4`).
@@ -466,7 +466,7 @@ value = get_value()
 with switch(value) as s:
     s.case(1, do_stuff)
     s.case(7, get_openings)
-    s.default(lamba: print("Default reached!"))
+    s.default(lambda: print("Default reached!"))
 ```
 
 Could be rewritten as:
@@ -475,7 +475,7 @@ Could be rewritten as:
 with switch(get_value, as_callable=True) as s:
     s.case(1, do_stuff)
     s.case(7, get_openings)
-    s.default(lamba: print("Default reached!"))
+    s.default(lambda: print("Default reached!"))
 ```
 
 Or using the `as_callable` property:
@@ -485,7 +485,7 @@ with switch(get_value) as s:
     s.as_callable = True
     s.case(1, do_stuff)
     s.case(7, get_openings)
-    s.default(lamba: print("Default reached!"))
+    s.default(lambda: print("Default reached!"))
 ```
 <a name='switch-args-kwargs'></a>
 For functions that take arguments, we could pass in those argument(s) using `args`, or `kwargs` arguments of the `switch` constructor.
