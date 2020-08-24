@@ -1,6 +1,6 @@
 {
     "name": "switches",
-    "version": "0.1.1",
+    "version": "0.1.0",
     "description": "Use C-like switch construct (and more!) in Python",
     "author": "Jeremiah Ikosin <@ziord>",
     "long-desc": "C-like switch package for Python",

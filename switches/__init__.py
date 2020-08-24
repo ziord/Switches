@@ -5,5 +5,5 @@
 
 __all__ = ('switch',)
 
-version = (0, 1, 1)
+version = (0, 1, 0)
 __version__ = '.'.join(map(str, version))

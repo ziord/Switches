@@ -1,7 +1,6 @@
 <p align="center">
     <p align="center">
-        <!-- <img alt="Switches image" src="assets/switches_256x256.png" > -->
-        <img alt="Switches image" src="https://github.com/ziord/Switches/blob/master/assets/switches_256x256.png" >
+        <img alt="Switches image" src="https://raw.githubusercontent.com/ziord/Switches/master/assets/switches_256x256.png" >
     </p>
     <p align="center">
         <a href="https://www.python.org/">
