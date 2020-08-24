@@ -1,9 +1,7 @@
-<!-- <div align="center">
-<img alt="leap image" src="assets/switches_256x256.png"/>
-</div> -->
 <p align="center">
     <p align="center">
-        <img alt="Switches image" src="assets/switches_256x256.png" >
+        <!-- <img alt="Switches image" src="assets/switches_256x256.png" > -->
+        <img alt="Switches image" src="https://github.com/ziord/Switches/blob/master/assets/switches_256x256.png" >
     </p>
     <p align="center">
         <a href="https://www.python.org/">
@@ -99,6 +97,12 @@ See the [tests](https://github.com/ziord/Switches/blob/master/tests) folder for 
 \
 <a name='installation'></a>
 ## Installation
+Via Pip: 
+
+`pip install switches.py`
+<br/>
+Alternatively:
+
 Clone this repo, and do:
 
 `cd Switches` <br/> `python setup.py install`
