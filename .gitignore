@@ -3,3 +3,4 @@ __pycache__
 build
 dist
 switches.py.egg-info
+switches-pkg.egg-info

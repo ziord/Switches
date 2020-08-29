@@ -7,6 +7,8 @@ from setuptools import setup, find_packages
 import info
 
 data = info.get_info()
+
+
 setup(
     name=data["name"]+'.py',
     version=data["version"],
